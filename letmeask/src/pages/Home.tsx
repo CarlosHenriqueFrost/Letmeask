@@ -1,6 +1,7 @@
 import Illustration from "../Assets/illustration.svg";
 import Logo from "../Assets/logo.svg";
 import GoogleIcon from "../Assets/google-icon.svg";
+import { Button } from "../components/Button";
 
 import "../styles/Home.scss";
 
@@ -16,17 +17,17 @@ export function Home() {
       </aside>
 
       <main>
-        <div>
+        <div className="LoginWithGoogleOrJoinARoom">
           <img src={Logo} alt="Logo da Letmeask" />
-          <button>
+          <button className="LoginWithGoogle">
             <img src={GoogleIcon} alt="Icone do Google" />
             Crie sua sala com Google
           </button>
-          <div>--------- Ou entre em uma sala ---------</div>
+          <div className="Divider">Ou entre em uma sala</div>
 
           <form>
             <input type="text" placeholder="Digite o código da sala" />
-            <button>Entrar em uma sala</button>
+            <Button type="submit">Entrar em uma sala</Button>
           </form>
         </div>
       </main>
