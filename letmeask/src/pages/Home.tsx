@@ -1,15 +1,17 @@
-import Illustration from "../Assets/illustration.svg"
-import Logo from "../Assets/logo.svg"
-import GoogleIcon from "../Assets/google-icon.svg"
+import Illustration from "../Assets/illustration.svg";
+import Logo from "../Assets/logo.svg";
+import GoogleIcon from "../Assets/google-icon.svg";
 
-import "../styles/global.css"
+import "../styles/Home.scss";
 
 export function Home() {
   return (
-    <div>
+    <div className="AuthComponent">
       <aside>
         <img src={Illustration} alt="imagem ilustrando perguntas e respostas" />
-        <strong>Toda pergunta tem uma resposta</strong>
+        <strong>
+          Toda pergunta tem <br /> uma resposta
+        </strong>
         <p>Aprenda e compartilhe conhecimento com outras pessoas</p>
       </aside>
 
@@ -23,14 +25,11 @@ export function Home() {
           <div>--------- Ou entre em uma sala ---------</div>
 
           <form>
-            <input 
-              type="text"
-              placeholder="Digite o código da sala"
-            />
+            <input type="text" placeholder="Digite o código da sala" />
             <button>Entrar em uma sala</button>
           </form>
         </div>
       </main>
     </div>
-  )
+  );
 }
