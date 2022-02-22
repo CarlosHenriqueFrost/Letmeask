@@ -2,17 +2,11 @@ import Illustration from "../Assets/illustration.svg";
 import Logo from "../Assets/logo.svg";
 import GoogleIcon from "../Assets/google-icon.svg";
 import { Button } from "../components/Button";
-import { useNavigate } from "react-router-dom";
 
 import "../styles/Home.scss";
 import "../styles/Button.scss";
 
-export function Home() {
-  const NavigationBetweenPages = useNavigate();
-
-  function TakeToNewRoomWithGoogle() {
-    NavigationBetweenPages("/room/new");
-  }
+export function NewRoomWithGoogle() {
   return (
     <div className="AuthComponent">
       <aside>
@@ -26,16 +20,14 @@ export function Home() {
       <main>
         <div className="LoginWithGoogleOrJoinARoom">
           <img src={Logo} alt="Logo da Letmeask" />
-          <button onClick={TakeToNewRoomWithGoogle} className="LoginWithGoogle">
-            <img src={GoogleIcon} alt="Icone do Google" />
-            Crie sua sala com Google
-          </button>
-          <div className="Divider">Ou entre em uma sala</div>
-
+          <h2>Crie uma nova sala</h2>
           <form>
-            <input type="text" placeholder="Digite o código da sala" />
-            <Button type="submit">Entrar em uma sala</Button>
+            <input type="text" placeholder="Nome da sala" />
+            <Button type="submit">Criar sala</Button>
           </form>
+          <p>
+            Quer entrar em uma sala já existente? <a href="#">Clique aqui</a>
+          </p>
         </div>
       </main>
     </div>

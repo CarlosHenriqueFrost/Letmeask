@@ -100,13 +100,28 @@
         }
       }
 
+      h2 {
+        margin: 3.5rem 0 1.5rem;
+      }
+
       form {
         input {
           height: 50px;
+          width: 320px;
           border-radius: 8px;
           padding: 0 16px;
           background: #fff;
           border: 1px solid #a8a8b3;
+        }
+      }
+
+      p {
+        font-size: 0.875rem;
+        color: #737380;
+        margin-top: 1rem;
+
+        a {
+          color: #a559f9;
         }
       }
     }
