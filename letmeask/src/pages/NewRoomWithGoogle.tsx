@@ -2,6 +2,7 @@ import Illustration from "../Assets/illustration.svg";
 import Logo from "../Assets/logo.svg";
 import GoogleIcon from "../Assets/google-icon.svg";
 import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
 
 import "../styles/Home.scss";
 import "../styles/Button.scss";
@@ -26,7 +27,8 @@ export function NewRoomWithGoogle() {
             <Button type="submit">Criar sala</Button>
           </form>
           <p>
-            Quer entrar em uma sala já existente? <a href="#">Clique aqui</a>
+            Quer entrar em uma sala já existente?{" "}
+            <Link to="/">Clique aqui</Link>
           </p>
         </div>
       </main>
