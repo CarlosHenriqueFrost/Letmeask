@@ -3,15 +3,14 @@ import Logo from "../Assets/logo.svg";
 import GoogleIcon from "../Assets/google-icon.svg";
 import { Button } from "../components/Button";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../App";
 
 import "../styles/Home.scss";
 import "../styles/Button.scss";
+import { useAuth } from "../hooks/useAuth";
 
 export function Home() {
   const NavigationBetweenPages = useNavigate();
-  const { user, LoginWithGoogle } = useContext(AuthContext);
+  const { user, LoginWithGoogle } = useAuth();
 
   async function AuthSystemWithGoogle() {
     // const AuthWithGoogle = new firebase.auth.GoogleAuthProvider();

@@ -2,14 +2,13 @@ import Illustration from "../Assets/illustration.svg";
 import Logo from "../Assets/logo.svg";
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../App";
+import { useAuth } from "../hooks/useAuth";
 
 import "../styles/Home.scss";
 import "../styles/Button.scss";
 
 export function NewRoomWithGoogle() {
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth();
 
   return (
     <div className="AuthComponent">
